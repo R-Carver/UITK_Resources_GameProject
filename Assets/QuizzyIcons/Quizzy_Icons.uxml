@@ -1,0 +1,53 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-image: resource(&apos;img/background&apos;);">
+        <ui:VisualElement name="UpperContainer" style="flex-basis: 20%; height: auto; flex-direction: row; justify-content: space-between; align-items: center;">
+            <ui:VisualElement name="SeperatorLeft" style="width: 25%; height: 10px; background-color: rgb(0, 0, 0);" />
+            <ui:Label tabindex="-1" text="Quizzy Icons" display-tooltip-when-elided="true" style="background-color: rgba(0, 0, 0, 0); font-size: 90px; color: rgb(0, 0, 0); -unity-font-definition: resource(&apos;fonts/Bungee-Regular SDF&apos;);" />
+            <ui:VisualElement name="SeperatorRight" style="width: 25%; height: 10px; background-color: rgb(0, 0, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="MiddleContainer" style="flex-basis: 15%; flex-direction: row; justify-content: center; background-color: rgb(169, 199, 198);">
+            <ui:VisualElement style="align-items: center;">
+                <ui:Label tabindex="-1" text="Question 1" display-tooltip-when-elided="true" name="QuestionCounter" style="font-size: 80px; color: rgb(0, 0, 0); -unity-font-style: bold; -unity-font-definition: resource(&apos;fonts/AlumniSansPinstripe-Regular SDF&apos;);" />
+                <ui:Label tabindex="-1" text="Your answer was correct" display-tooltip-when-elided="true" name="AnswerIndicator" style="font-size: 40px; color: rgb(6, 137, 16); -unity-font-definition: resource(&apos;fonts/Bungee-Regular SDF&apos;); background-color: rgba(30, 192, 45, 0); visibility: hidden;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="LowerContainer" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="IconContainer" style="flex-basis: 100%; align-items: center; justify-content: center;">
+                <ui:VisualElement name="Scores" style="width: 70%;">
+                    <ui:Label tabindex="-1" text="Score 123" display-tooltip-when-elided="true" style="font-size: 30px; color: rgb(0, 0, 0); -unity-font-definition: resource(&apos;fonts/AlumniSansPinstripe-Regular SDF&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="IconBoard" style="width: 70%; height: 70%; border-left-width: 20px; border-right-width: 20px; border-top-width: 20px; border-bottom-width: 20px; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-color: rgb(77, 77, 77); border-right-color: rgb(77, 77, 77); border-top-color: rgb(77, 77, 77); border-bottom-color: rgb(77, 77, 77);">
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 210px; left: 490px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 118px; left: 360px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 250px; left: 334px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 332px; left: 462px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 62px; left: 70px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 176px; left: 156px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 310px; left: 116px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 348px; left: 260px;" />
+                    <ui:VisualElement style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 44px; left: 202px;" />
+                    <ui:VisualElement name="TestIcon" style="width: 50px; height: 50px; background-image: resource(&apos;img/arc&apos;); position: absolute; top: 64px; left: 492px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="AnswerContainer" style="flex-basis: 100%; align-items: center; justify-content: center;">
+                <ui:VisualElement name="AnswerBoard" style="width: 70%; height: 70%;">
+                    <ui:VisualElement name="TimeBar" style="flex-basis: 10%;">
+                        <ui:Label tabindex="-1" text="30 sek" display-tooltip-when-elided="true" name="CounterLabel" style="font-size: 35px; color: rgb(214, 40, 40); -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="HintBar" style="flex-basis: 10%; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Hint 1:" display-tooltip-when-elided="true" name="HintNum" style="font-size: 35px; color: rgb(0, 0, 0); flex-grow: 1;" />
+                        <ui:Button tabindex="-1" text="NEXT HINT" display-tooltip-when-elided="true" name="NextHintButton" style="background-color: rgb(43, 43, 43); font-size: 25px; padding-left: 10px; padding-right: 10px; padding-top: 4px; padding-bottom: 4px; color: rgb(255, 255, 255); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="QuestionText" style="flex-basis: 30%;">
+                        <ui:Label tabindex="-1" text="Stupid little Start Text" display-tooltip-when-elided="true" name="Hint" style="font-size: 36px; color: rgb(0, 0, 0); -unity-font-definition: resource(&apos;fonts/Aboreto-Regular SDF&apos;); -unity-font-style: normal;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DropContainer" style="flex-basis: 50%; align-items: center; justify-content: space-around; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                        <ui:VisualElement name="DropBox" style="width: 35%; height: 60%; background-color: rgb(214, 40, 40); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;" />
+                        <ui:Label tabindex="-1" text="Drag your answer here" display-tooltip-when-elided="true" style="font-size: 34px; color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="DragArea" style="position: absolute; flex-grow: 1; width: 100%; height: 100%; display: none;" />
+</ui:UXML>
